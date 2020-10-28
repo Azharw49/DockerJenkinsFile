@@ -1,8 +1,13 @@
 pipeline {
-    agent any
+    agent 
+    {
+        label 'slave'
+    }
     stages {
         stage('Compile') {
             steps {
+                sh 'java -version'
+                sh 'pwd'
                 echo "Compile Done"
             }
         }
