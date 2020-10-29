@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh 'java -v'
+                sh 'java -version'
                 sh 'pwd'
                 echo "Compile Done"
             }
