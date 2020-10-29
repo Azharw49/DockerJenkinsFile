@@ -1,12 +1,13 @@
 pipeline {
     agent 
     {
-        label 'windows'
+        docker 'maven:3-alpine'
     }   
     stages {
         stage('Compile') {
             steps {
-                bat 'java -version'
+                sh 'java -v'
+                sh 'pwd'
                 echo "Compile Done"
             }
         }
