@@ -1,7 +1,7 @@
 pipeline {
     agent 
     {
-        label 'slave'
+        label 'windows'
     }
     stages {
         stage('Compile') {
